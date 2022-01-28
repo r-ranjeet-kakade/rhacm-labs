@@ -4,9 +4,13 @@ metadata:
   name: dev-clusters
   namespace: etherpad
 spec:
-  clusterConditions:
-    - type: ManagedClusterConditionAvailable
-      status: "True"
   clusterSelector:
     matchLabels:
       environment: dev
+      GUID: kfqtl
+      clusterID: 5d8316eb-858c-4e85-9122-2048375912d3
+      name: local-cluster
+status:
+  decisions:
+    - clusterName: local-cluster
+      clusterNamespace: local-cluster
